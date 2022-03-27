@@ -1,2 +1,2 @@
 # tld-blacklist
-A TLD Blacklist.
+A blacklist with .tld's. A raw and a regex version.
