@@ -22,7 +22,7 @@ I will look like this:
                message		= You have been blacklisted for sending SPAM.
         # END
 
-   	accept hosts = :
+   		accept hosts = :
         
 4. Update the Exim4 configuration. (I execute this command within the /etc/exim4/ directory.)
  
