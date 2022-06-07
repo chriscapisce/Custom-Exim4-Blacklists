@@ -43,7 +43,7 @@ I've been searching and testing for a while, it seems that wildcards such as the
 	*@name.tld
 	and even *@*.tld
 	
-# 3/3: Updating the Exim4 Blacklist.
+### 3/3: Updating the Exim4 Blacklist.
 
 Add records to the blacklist (customglobalblacklist)
 
