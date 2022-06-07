@@ -1,9 +1,8 @@
 # tld-blacklist
 A massive .tld blacklist with both a raw and a `*@*.xyz` version for exim4.
 
-Follow these instructions https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2 to implement the exim4 blacklist.
-
-### 1/3 Instructions:
+### 1/3 How to implement the exim4 blacklist (into HestiaCP):
+Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
 
 1. Create a file called 'customglobalblacklist' within /etc/exim4/
 2. Go in HestiaCP - Settings - Exim4 (edit). This will edit the file: /etc/exim4/exim4.conf.template
@@ -14,7 +13,7 @@ Follow these instructions https://forum.hestiacp.com/t/ban-block-an-email-addres
  	      message	= You have been blacklisted for sending SPAM.
         # END
 
-I will look like this:
+It will look like this:
 	
 	acl_check_rcpt:
 
@@ -33,8 +32,7 @@ I will look like this:
         
         systemctl restart exim4.service
 
-### 2/3 Formatting the blacklist (customglobalblacklist):
-
+### 2/3 How to format the exim4 blacklist:
 Source: https://marc.info/?l=exim-users&m=146279505017913&w=2
 
 I've been searching and testing for a while, it seems that wildcards such as the following work:
@@ -43,7 +41,7 @@ I've been searching and testing for a while, it seems that wildcards such as the
 	*@name.tld
 	and even *@*.tld
 	
-### 3/3: Updating the Exim4 Blacklist.
+### 3/3: How to update/ edit the exim4 blacklist:
 
 1. Add records to the blacklist (customglobalblacklist)
 
