@@ -3,6 +3,7 @@ A massive .tld blacklist with both a raw and a `*@*.xyz` version for exim4.
 
 Follow these instructions https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2 to implement the exim4 blacklist.
 
+### 1/3 Instructions:
 
 1. Create a file called 'customglobalblacklist' within /etc/exim4/
 2. Go in HestiaCP - Settings - Exim4 (edit). This will edit the file: /etc/exim4/exim4.conf.template
@@ -31,3 +32,30 @@ I will look like this:
 5. Restart the exim4 service:
         
         systemctl restart exim4.service
+
+### 2/3 Formatting the blacklist (customglobalblacklist):
+
+Source: https://marc.info/?l=exim-users&m=146279505017913&w=2
+
+I've been searching and testing for a while, it seems that wildcards such as the following work:
+
+	name@*.tld
+	*@name.tld
+	and even *@*.tld
+	
+# 3/3: Updating the Exim4 Blacklist.
+
+Add records to the blacklist (customglobalblacklist)
+
+ 	cd /etc/exim4/ 
+
+ 	nano customglobalblacklist
+
+Update the Exim4 configuration:
+
+ 	update-exim4.conf
+
+Restart the exim4 service:
+
+ 	systemctl restart exim4.service
+
