@@ -19,7 +19,7 @@ It will look like this:
 
         # CUSTOM ADDED ACL
                deny senders	= /etc/exim4/customglobalblacklist
-               message		= You have been blacklisted for sending SPAM.
+               message	= You have been blacklisted for sending SPAM.
         # END
 
 	accept hosts = :
