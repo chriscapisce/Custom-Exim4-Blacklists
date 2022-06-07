@@ -35,11 +35,11 @@ It will look like this:
 ### 2/3 How to format the exim4 blacklist:
 Source: https://marc.info/?l=exim-users&m=146279505017913&w=2
 
-I've been searching and testing for a while, it seems that wildcards such as the following work:
+I've been searching and testing for a while, it seems that wildcards (*) such as the following work:
 
 	name@*.tld
 	*@name.tld
-	and even *@*.tld
+	*@*.tld
 	
 ### 3/3: How to update/ edit the exim4 blacklist:
 
