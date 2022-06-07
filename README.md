@@ -50,9 +50,9 @@ I've been searching and testing for a while, it seems that wildcards such as the
 
 2. Update the Exim4 configuration:
 
-	root@host:~$	update-exim4.conf
+		root@host:~$	update-exim4.conf
 
 3. Restart the exim4 service:
 
-	root@host:~$	systemctl restart exim4.service
+		root@host:~$	systemctl restart exim4.service
 
