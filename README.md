@@ -45,15 +45,15 @@ I've been searching and testing for a while, it seems that wildcards such as the
 
 1. Add records to the blacklist (customglobalblacklist)
 
- 	cd /etc/exim4/ 
+				cd /etc/exim4/ 
 
- 	nano customglobalblacklist
+				nano customglobalblacklist
 
 2. Update the Exim4 configuration:
 
- 	update-exim4.conf
+				update-exim4.conf
 
 3. Restart the exim4 service:
 
- 	systemctl restart exim4.service
+	systemctl restart exim4.service
 
