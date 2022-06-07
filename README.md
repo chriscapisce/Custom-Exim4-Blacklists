@@ -24,13 +24,13 @@ It will look like this:
 
 	accept hosts = :
         
-4. Update the Exim4 configuration. (I execute this command within the /etc/exim4/ directory.)
+4. Update the Exim4 configuration:
  
-        update-exim4.conf
+        root@host:~$	update-exim4.conf
 
 5. Restart the exim4 service:
         
-        systemctl restart exim4.service
+        root@host:~$	systemctl restart exim4.service
 
 ### 2/3 How to format the exim4 blacklist:
 Source: https://marc.info/?l=exim-users&m=146279505017913&w=2
