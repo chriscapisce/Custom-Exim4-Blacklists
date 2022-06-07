@@ -12,3 +12,15 @@ Follow these instructions https://forum.hestiacp.com/t/ban-block-an-email-addres
  	      deny senders	= /etc/exim4/customglobalblacklist
  	      message	= You have been blacklisted for sending SPAM.
         # END
+
+I will look like this:
+
+                                acl_check_rcpt:
+
+                                # CUSTOM ADDED ACL
+                                  deny senders	= /etc/exim4/customglobalblacklist
+                                  message		= You have been blacklisted for sending SPAM.
+                                # END
+
+                                accept hosts = :
+
