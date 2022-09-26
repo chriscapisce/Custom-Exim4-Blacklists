@@ -54,14 +54,14 @@ Both names and wildcards (*) such as the following work:
 
 1. Add records to the blacklist (customglobalblacklist)
 
-	root@host:~$	cd /etc/exim4/ 
-	root@host:~$ 	nano customglobaltldblacklist
+		root@host:~$	cd /etc/exim4/ 
+		root@host:~$ 	nano customglobaltldblacklist
 
 2. Update the Exim4 configuration:
 
-	root@host:~$	update-exim4.conf
+		root@host:~$	update-exim4.conf
 
 3. Restart the exim4 service:
 
-	root@host:~$	systemctl restart exim4.service
+		root@host:~$	systemctl restart exim4.service
 
