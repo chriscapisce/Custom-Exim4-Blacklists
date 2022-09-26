@@ -10,12 +10,12 @@ Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
 3. Add the following rule just above the accept hosts = : line from the acl_check_rcpt block:
 
 # CUSTOM ADDED ACL
-   deny senders		= /etc/exim4/customglobaltldblacklist
-   message		= You have been blacklisted for sending SPAM.
-   deny senders	        = /etc/exim4/customglobaldomainblacklist
-   message	        = You have been blacklisted for sending SPAM.
-   deny senders	        = /etc/exim4/customglobalemailblacklist
-   message	        = You have been blacklisted for sending SPAM.
+   deny senders	= /etc/exim4/customglobaltldblacklist
+   message	= You have been blacklisted for sending SPAM.
+   deny senders	= /etc/exim4/customglobaldomainblacklist
+   message	= You have been blacklisted for sending SPAM.
+   deny senders	= /etc/exim4/customglobalemailblacklist
+   message	= You have been blacklisted for sending SPAM.
 # END
 
 It will look like this:
