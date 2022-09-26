@@ -2,7 +2,7 @@
 
 A few blacklists exim4.
 
-### 1/3 How to implement the exim4 blacklist (into HestiaCP):
+### 1/3 How to implement the exim4 blacklist(s) (into HestiaCP):
 Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
 
 1. Create a file called 'customglobaltldblacklist' within /etc/exim4/
