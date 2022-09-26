@@ -1,6 +1,6 @@
 # Custom Exim4 Blacklists
 
-A few blacklists exim4.
+A few blacklists for exim4.
 
 ### 1/3 How to implement the exim4 blacklist(s) (into HestiaCP):
 Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
