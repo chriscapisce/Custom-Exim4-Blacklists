@@ -21,7 +21,7 @@ Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
 ```
 
 It will look like this:
-	
+```
 	acl_check_rcpt:
 
         # CUSTOM ADDED ACL
@@ -34,7 +34,8 @@ It will look like this:
         # END
 
 	accept hosts = :
-        
+```
+
 4. Update the Exim4 configuration:
  
         root@host:~$	update-exim4.conf
