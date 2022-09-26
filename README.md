@@ -1,16 +1,21 @@
-# tld-blacklist
-A massive .tld blacklist with both a raw and a `*@*.xyz` version for exim4.
+# Custom Exim4 Blacklists
+
+A few blacklists exim4.
 
 ### 1/3 How to implement the exim4 blacklist (into HestiaCP):
 Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
 
-1. Create a file called 'customglobalblacklist' within /etc/exim4/
+1. Create a file called 'customglobaltldblacklist' within /etc/exim4/
 2. Go in HestiaCP - Settings - Exim4 (edit). This will edit the file: /etc/exim4/exim4.conf.template
 3. Add the following rule just above the accept hosts = : line from the acl_check_rcpt block:
 
         # CUSTOM ADDED ACL
- 	      deny senders	= /etc/exim4/customglobalblacklist
- 	      message	= You have been blacklisted for sending SPAM.
+	   deny senders	        = /etc/exim4/customglobaltldblacklist
+	   message	        = You have been blacklisted for sending SPAM.
+	   deny senders	        = /etc/exim4/customglobaldomainblacklist
+	   message	        = You have been blacklisted for sending SPAM.
+	   deny senders	        = /etc/exim4/customglobalemailblacklist
+	   message	        = You have been blacklisted for sending SPAM.
         # END
 
 It will look like this:
@@ -18,8 +23,12 @@ It will look like this:
 	acl_check_rcpt:
 
         # CUSTOM ADDED ACL
-               deny senders	= /etc/exim4/customglobalblacklist
-               message	= You have been blacklisted for sending SPAM.
+           deny senders	        = /etc/exim4/customglobaltldblacklist
+	   message	        = You have been blacklisted for sending SPAM.
+	   deny senders	        = /etc/exim4/customglobaldomainblacklist
+	   message	        = You have been blacklisted for sending SPAM.
+	   deny senders	        = /etc/exim4/customglobalemailblacklist
+	   message	        = You have been blacklisted for sending SPAM.
         # END
 
 	accept hosts = :
@@ -45,14 +54,14 @@ Both names and wildcards (*) such as the following work:
 
 1. Add records to the blacklist (customglobalblacklist)
 
-		root@host:~$	cd /etc/exim4/ 
-		root@host:~$ 	nano customglobalblacklist
+	root@host:~$	cd /etc/exim4/ 
+	root@host:~$ 	nano customglobaltldblacklist
 
 2. Update the Exim4 configuration:
 
-		root@host:~$	update-exim4.conf
+	root@host:~$	update-exim4.conf
 
 3. Restart the exim4 service:
 
-		root@host:~$	systemctl restart exim4.service
+	root@host:~$	systemctl restart exim4.service
 
