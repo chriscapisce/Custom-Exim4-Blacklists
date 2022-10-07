@@ -5,7 +5,7 @@ A few blacklists for exim4.
 ### 1/3 How to implement the exim4 blacklist(s) (into HestiaCP):
 Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
 
-1. Create a file called 'customglobaltldblacklist' within '/etc/exim4/'
+1. Create a file called 'customglobaltldblacklist' within ```/etc/exim4/```
 2. Go in HestiaCP - Settings - Exim4 (edit). This will edit the file: /etc/exim4/exim4.conf.template
 3. Add the following rule just above the accept hosts = : line from the acl_check_rcpt block:
 ```
