@@ -58,6 +58,7 @@ Both names and wildcards (*) such as the following work:
 ```
 	root@host:~$	cd /etc/exim4/ 
 	root@host:~$ 	nano customglobaltldblacklist
+	root@host:~$ 	*@*.tld
 ```
 2. Update the Exim4 configuration:
 ```
