@@ -51,7 +51,6 @@ Both names and wildcards (*) such as the following work:
 	*@name.tld
 	*@*.tld
 	email@domain.tld
-
 ```	
 ### 3/3: How to update/ edit the exim4 blacklist:
 
