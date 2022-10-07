@@ -52,9 +52,9 @@ Both names and wildcards (*) such as the following work:
 	*@*.tld
 	email@domain.tld
 ```	
-### 3/3: How to update/ edit the exim4 blacklist:
+### 3/3: How to edit/ update an exim4 blacklist:
 
-1. Add records to the blacklist (customglobalblacklist)
+1. Add records to the blacklist (customglobaltldblacklist)
 ```
 	root@host:~$	cd /etc/exim4/ 
 	root@host:~$ 	nano customglobaltldblacklist
