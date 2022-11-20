@@ -24,12 +24,12 @@ It will look like this:
 	acl_check_rcpt:
 
         # CUSTOM ADDED ACL
-           deny senders	        = /etc/exim4/customglobaltldblacklist
-	   message	        = You have been blacklisted for sending SPAM.
-	   deny senders	        = /etc/exim4/customglobaldomainblacklist
-	   message	        = You have been blacklisted for sending SPAM.
-	   deny senders	        = /etc/exim4/customglobalemailblacklist
-	   message	        = You have been blacklisted for sending SPAM.
+	  deny senders	        = /etc/exim4/customglobaltldblacklist
+   	  message	        = Your tld has been blacklisted for sending SPAM.
+   	  deny senders	        = /etc/exim4/customglobaldomainblacklist
+   	  message	        = Your domain has been blacklisted for sending SPAM.
+   	  deny senders	        = /etc/exim4/customglobalemailblacklist
+   	  message	        = Your email address has been blacklisted for sending SPAM.
         # END
 
 	accept hosts = :
