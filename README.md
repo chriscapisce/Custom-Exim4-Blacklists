@@ -17,7 +17,10 @@ Source: https://forum.hestiacp.com/t/ban-block-an-email-address/5553/2
    	  message	        = Your domain has been blacklisted for sending SPAM.
    	  deny senders	        = /etc/exim4/customglobalemailblacklist
    	  message	        = Your email address has been blacklisted for sending SPAM.
-        # END
+    deny
+       condition = ${lookup{$sender_host_name}wildlsearch{/etc/exim4/customglobalrdnsblacklist}{yes}{no}}
+       message = Your sending server reverse DNS is blocked for sending SPAM.
+  # END
 ```
 It will look like this:
 ```
@@ -30,7 +33,10 @@ It will look like this:
    	  message	        = Your domain has been blacklisted for sending SPAM.
    	  deny senders	        = /etc/exim4/customglobalemailblacklist
    	  message	        = Your email address has been blacklisted for sending SPAM.
-        # END
+    deny
+       condition = ${lookup{$sender_host_name}wildlsearch{/etc/exim4/customglobalrdnsblacklist}{yes}{no}}
+       message = Your sending server reverse DNS is blocked for sending SPAM.
+  # END
 
 	accept hosts = :
 ```
